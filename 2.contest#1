@@ -1,0 +1,6 @@
+def bonAppetit(bill, k, b):
+    refund = b - (sum(bill) - bill[k]) // 2
+    if refund:
+        print(refund)
+    else:
+        print("Bon Appetit")
