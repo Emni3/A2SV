@@ -1,0 +1,23 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+        # par = {")" : "(", "]" : "[", "}" : "{"}
+        # stack = []
+        # for i in s:
+        #     if i in par.values():
+        #         stack.append(i)
+        #     elif stack and par(i) == stack[-1]:
+        #         stack.pop()
+        #     else:
+        #         return False
+        # return stack == []
+        symbols = {"(" : ")", "[" : "]", "{" : "}"}
+        stack = []
+        for i in s:
+            if i in symbols:
+                stack.append(i)
+            elif stack and symbols[stack[-1]]==i:
+                stack.pop()
+            else:
+                return False
+        return len(stack)==0
+                
