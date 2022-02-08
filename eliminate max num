@@ -1,0 +1,10 @@
+class Solution:
+    def eliminateMaximum(self, dist: List[int], speed: List[int]) -> int:
+        times = sorted([s/v for s, v in zip(dist, speed)])
+        res = 0
+        for i in range(len(times)):
+            if i < times[i]:
+                res += 1
+            else:
+                break
+        return res
