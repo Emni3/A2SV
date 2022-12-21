@@ -1,0 +1,15 @@
+k = int(input())
+room_num = list(map(int, input().split(" ")))
+group = {}
+cap_num = 0
+for i in room_num:
+    if i in group:
+        group[i] += 1
+    else:
+        group[i] = 1
+        
+for room_no in group:
+    if group[room_no] != k:
+        cap_num = room_no
+print(cap_num)
+        
