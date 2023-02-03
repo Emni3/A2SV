@@ -23,6 +23,8 @@ class Solution:
                     self.insert(group, ans)
                 group = 0
                 left = right
+        if group == 1:
+            ans.append(chars[-1])
         #print((str(group).split()))
         if group > 1:
             ans.append(chars[-1])
